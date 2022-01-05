@@ -1,0 +1,4 @@
+Replacing Existing Elements in DOM:
+You can also replace an element in HTML DOM with another using the replaceChild() method. This 
+method accepts two parameters: the node to insert and the node to be replaced. It has the syntax like 
+parentNode.replaceChild(newChild, oldChild);
