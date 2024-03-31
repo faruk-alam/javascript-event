@@ -1,0 +1,85 @@
+Keyboard events have specific properties for accessing individual keys.
+like as:
+
+Event object Argument e or ev or evt -
+The e is short for event.The simplest way to create an event is to click somewhere on the page.
+The parameter e that you are asking about is an Event object, and it represents the event being fired which 
+caused your function to be executed. It doesnt really have to be e, you can name it anything you want just 
+like all other function parameters.
+
+event.type - 
+Event type in the Event object in JavaScript
+The Event object also contains the type of the event that occurred. By type is meant the name click, 
+mouseover, and so on. The type property contains the event type:
+
+For Example:
+elem.addEventListener('click', function(event) {
+	console.log(event.type); // shows 'click'
+});
+
+event.currentTarget - 
+event.currentTarget is a property of the event object which identifies the specific HTML element the event 
+listener was attached to.
+
+event.target -
+event.target is a property of the event object which identifies the specific HTML element on which the 
+event occurred.
+
+(this) - keyword in  event object -
+In event handlers, this takes on yet another meaning. When you use this inside an event handler, it refers 
+to the element that triggered the event.
+[Note : "this" keyword works only with regular function not arrow function]
+
+For example, let’s say you have a button on a page, and you want to log the text of the button when it’s 
+clicked. You can use the following code:
+
+const button = document.querySelector('button');
+button.addEventListener('click', function() {
+  console.log(this.textContent);
+});
+In this example, we use querySelector to get a reference to the button element, and then we use 
+addEventListener to attach a click event to the button. When the button is clicked, the function inside 
+addEventListener is executed, and this inside the function refers to the button element. 
+So console.log(this.textContent) logs the text of the button.
+
+Using this in event handlers is a powerful technique for making your JavaScript code more dynamic and 
+interactive. It allows you to write event-driven code that responds to user actions, making your web pages 
+more engaging and interactive.
+
+
+preventDefault() - prevents default behavours -
+Several events can be fired when we access a website. These events could be a button click, filling out a 
+form and submitting it, closing a tab, clicking a checkbox, or scrolling a page. All of these are events.
+In JavaScript, these events’ actions can be canceled. Yes, they can be kept from executing the default 
+action that is associated with it. This is done using the preventDefault() method of an event. 
+
+JavaScript, event.preventDefault() is a method used to prevent the default behavior of a specified event 
+from occurring.
+
+
+
+If a parameter, known as an event object, is passed through to the event listener, we can access more 
+information about the action that took place. Two properties that pertain to keyboard objects include key 
+and code.
+
+For example, if the user presses the letter a key on their keyboard, the following properties pertaining to 
+that key will surface:
+
+Property	        Description	                      Example
+key	         Represents the character name	                a
+code	     Represents the physical key 
+             being pressed	                              KeyA
+To show how to gather that information via the JavaScript Console, we can write the following lines of code.
+
+// Test the key and code properties
+document.addEventListener('keydown', event => {
+	console.log('key: ' + event.key);
+	console.log('code: ' + event.code);
+});
+Once we press ENTER on the Console, we can now press a key on the keyboard, in this example, we’ll press a.
+
+Output
+key: a
+code: KeyA
+The key property is the name of the character, which can change — for example, pressing a with SHIFT would 
+result in a key of A. The code property represents the physical key on the keyboard.

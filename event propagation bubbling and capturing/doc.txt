@@ -1,0 +1,19 @@
+Event Propagation :
+In JavaScript,Event Propagation refers to how events travel through the Document Object Model (DOM) tree. 
+The DOM tree is the structure which contains parent/child/sibling elements in relation to each other. We can
+think of propagation as electricity running through a wire, until it reaches its destination. The event
+needs to pass through every node on the DOM until it reaches the end, or if it is forcibly stopped.
+
+Event Bubbling and Capturing :
+Bubbling and Capturing are the two phases of propagation.In their simplest definitions, bubbling travels 
+from the target to the root, and capturing travels from the root to the target. 
+The target is the DOM node on which you click, or trigger with any other event.
+
+For example, a button with a click event would be the event target.
+
+The root is the highest-level parent of the target. This is usually the document, which is a parent of the
+which is a (possibly distant) parent of your target element.
+
+Stopping bubbling :
+A bubbling event goes from the target element straight up. Normally it goes upwards till <html>, and then 
+to document object, and some events even reach window, calling all handlers on the path.

@@ -1,4 +1,14 @@
-Replacing Existing Elements in DOM:
-You can also replace an element in HTML DOM with another using the replaceChild() method. This 
-method accepts two parameters: the node to insert and the node to be replaced. It has the syntax like 
-parentNode.replaceChild(newChild, oldChild);
+What's an Event?
+Before we get into Event Listener, let's talk about what an event is. In the web world, an event is 
+basically something that happens – a click, a keypress, a mouse movement, you name it. These events can be 
+captured and responded to using JavaScript.
+
+The Event Listener
+To catch these events, we use something called an event listener.An event listener is a mechanism that 
+allows us to listen for specific events that occur on HTML elements, such as clicks, keypresses, mouse 
+movements, and more. Event listeners allow us to execute code or trigger functions when those events 
+happen.
+
+The general syntax for adding an event listener to an HTML element is as follows:
+
+element.addEventListener(event, callback);

@@ -1,0 +1,15 @@
+JavaScript removeEventListener() method :
+Javascript removeEventListener() is an inbuilt function that is used to remove an event handler that was 
+previously added using the addEventListener() function to on a specific element.
+
+Syntax:
+element.removeEventListener(event, listener, useCapture)
+
+Parameters:
+It accepts three parameters which are specified below-
+
+event: It is a string that describes the name of the event that has to be removed.
+listener: It is the function of the event handler to remove.
+useCapture: It is an optional parameter. By default, it is a Boolean value false which specifies the 
+removal of the event handler from the bubbling phase and if it is true then the removeEventListener() 
+method removes the event handler from the capturing phase.

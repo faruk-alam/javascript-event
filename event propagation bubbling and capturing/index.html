@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event propagation,bubbling and capturing </title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="container">
+    <ul class="list-item">
+        <li class="list"><a href="" class="link">link - 1</a></li>
+        <li class="list"><a href="" class="link">link - 2</a></li>
+        <li class="list"><a href="" class="link">link - 3</a></li>
+    </ul>
+    </div>
+    <!-- Using event bubbling -->
+    
+    <form onclick="alert('form')">FORM
+        <div onclick="alert('div')">DIV
+          <p onclick="alert('p')">P</p>
+        </div>
+      </form>
+      <!-- using stopPropagation -->
+    <div class="container-2" onclick="alert('this bubbling does not run again')">
+        <button onclick="event.stopPropagation()">click</button>
+
+    </div>
+
+    <!-- A click on the inner <p> first runs onclick:
+    On that <p>.
+    Then on the outer <div>.
+    The on the outer <form>.
+    And so on upwards till the document object.
+    So if we click on <p>, then we’ll see 3 alerts: p → div → form.
+        
+    The process is called “bubbling”, because events “bubble” from the inner element up through 
+    parents like a bubble in the water. -->
+
+
+
+ 
+    <script src="app.js"></script>
+</body>
+</html>

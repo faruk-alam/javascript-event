@@ -1,0 +1,19 @@
+An event listener attaches a responsive interface to an element, which allows that particular element to 
+wait and “listen” for the given event to fire.
+
+There are three ways to assign events to elements:
+
+Inline event handlers
+Event handler properties
+Event listeners
+
+Inline Event Handler Attributes:
+To begin learning about event handlers, we’ll first consider the inline event handler.
+
+Event Listeners
+The latest addition to JavaScript event handlers are event listeners. An event listener watches for an 
+event on an element. Instead of assigning the event directly to a property on the element, we will use the 
+addEventListener() method to listen for the event.
+
+addEventListener() takes two mandatory parameters — the event it is to be listening for, and the listener 
+callback function.

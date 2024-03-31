@@ -1,0 +1,12 @@
+body{
+    text-align: center;
+}
+.changeColor{
+    text-transform: uppercase;
+    font-size: larger;
+    font-weight: bolder;
+    letter-spacing: 10px;
+    background-color: red;
+    color: azure;
+    padding: 25px;
+}

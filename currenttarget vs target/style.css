@@ -1,0 +1,10 @@
+button{
+    display: block;
+    margin: 30px;
+    padding: 5px 10px;
+}
+.effect{
+    color: aquamarine;
+    background-color: red;
+    letter-spacing: 3px;
+}

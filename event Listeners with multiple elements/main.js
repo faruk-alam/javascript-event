@@ -31,3 +31,4 @@
       myText.innerHTML = "You have clicked " + text;
    })
  }
+
